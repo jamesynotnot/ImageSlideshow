@@ -269,6 +269,8 @@ public class ImageSlideshow: UIView, UIScrollViewDelegate {
         } else {
             currentItemIndex = page
         }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("scrollTouched", object: page)
     }
     
     /// Stops slideshow timer
